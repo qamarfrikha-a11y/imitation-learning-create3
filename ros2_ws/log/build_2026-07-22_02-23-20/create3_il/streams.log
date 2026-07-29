@@ -1,0 +1,34 @@
+[2.805s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_il': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/create3_il build --build-base /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build install --record /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/install.log --install-scripts $base/lib/create3_il --single-version-externally-managed install_data
+[3.678s] running egg_info
+[3.710s] writing ../../build/create3_il/create3_il.egg-info/PKG-INFO
+[3.711s] writing dependency_links to ../../build/create3_il/create3_il.egg-info/dependency_links.txt
+[3.712s] writing entry points to ../../build/create3_il/create3_il.egg-info/entry_points.txt
+[3.712s] writing requirements to ../../build/create3_il/create3_il.egg-info/requires.txt
+[3.712s] writing top-level names to ../../build/create3_il/create3_il.egg-info/top_level.txt
+[3.792s] reading manifest file '../../build/create3_il/create3_il.egg-info/SOURCES.txt'
+[3.793s] writing manifest file '../../build/create3_il/create3_il.egg-info/SOURCES.txt'
+[3.794s] running build
+[3.794s] running build_py
+[3.799s] copying create3_il/inference_node.py -> /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il
+[3.799s] copying create3_il/dagger_session_node.py -> /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il
+[3.800s] running install
+[3.810s] running install_lib
+[3.841s] copying /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il/inference_node.py -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il
+[3.842s] copying /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il/dagger_session_node.py -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il
+[3.842s] byte-compiling /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/inference_node.py to inference_node.cpython-310.pyc
+[3.844s] byte-compiling /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/dagger_session_node.py to dagger_session_node.cpython-310.pyc
+[3.844s]   File "/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/inference_node.py", line 73
+[3.844s]     nano ~/stage_imitation_learning/ros2_ws/src/create3_il/create3_il/inference_node.py        self.device = torch.device('cpu')
+[3.844s]          ^
+[3.845s] SyntaxError: invalid syntax
+[3.845s] 
+[3.852s] running install_data
+[3.852s] running install_egg_info
+[3.886s] removing '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il-0.0.0-py3.10.egg-info' (and everything under it)
+[3.887s] Copying ../../build/create3_il/create3_il.egg-info to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il-0.0.0-py3.10.egg-info
+[3.888s] running install_scripts
+[4.025s] Installing bc_inference_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+[4.026s] Installing dagger_session_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+[4.026s] Installing il_data_collector script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+[4.027s] writing list of installed files to '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/install.log'
+[4.147s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_il' returned '0': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/create3_il build --build-base /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build install --record /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/install.log --install-scripts $base/lib/create3_il --single-version-externally-managed install_data

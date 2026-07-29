@@ -1,0 +1,246 @@
+[0.000000] (-) TimerEvent: {}
+[0.007628] (create3_lidar_description) JobQueued: {'identifier': 'create3_lidar_description', 'dependencies': OrderedDict()}
+[0.014166] (create3_lidar_description) JobStarted: {'identifier': 'create3_lidar_description'}
+[0.075132] (create3_lidar_description) JobProgress: {'identifier': 'create3_lidar_description', 'progress': 'cmake'}
+[0.082003] (create3_lidar_description) Command: {'cmd': ['/usr/bin/cmake', '/home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description'], 'cwd': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'luna'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{1d3a5131-71e3-5d2c-971d-3c246a741fa2}'), ('HOME', '/home/luna'), ('OLDPWD', '/home/luna'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/luna/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'luna'), ('NAME', 'DESKTOP-P6HTC6S'), ('WSL_INTEROP', '/run/WSL/32813_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/fac/arduino/Scripts/:/mnt/c/fac/arduino/:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin/:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/USER/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/USER/AppData/Local/Programs/Antigravity/bin:/mnt/c/MinGW/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Roaming/npm:/snap/bin'), ('WT_SESSION', '6f47b024-4f60-498d-aa67-19f71e3478b9'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.102677] (-) TimerEvent: {}
+[0.203400] (-) TimerEvent: {}
+[0.304318] (-) TimerEvent: {}
+[0.405269] (-) TimerEvent: {}
+[0.506435] (-) TimerEvent: {}
+[0.607528] (-) TimerEvent: {}
+[0.708590] (-) TimerEvent: {}
+[0.810308] (-) TimerEvent: {}
+[0.916550] (-) TimerEvent: {}
+[1.028264] (-) TimerEvent: {}
+[1.129137] (-) TimerEvent: {}
+[1.230055] (-) TimerEvent: {}
+[1.331001] (-) TimerEvent: {}
+[1.431641] (-) TimerEvent: {}
+[1.533001] (-) TimerEvent: {}
+[1.633949] (-) TimerEvent: {}
+[1.736351] (-) TimerEvent: {}
+[1.839135] (-) TimerEvent: {}
+[1.939980] (-) TimerEvent: {}
+[2.041170] (-) TimerEvent: {}
+[2.142007] (-) TimerEvent: {}
+[2.242766] (-) TimerEvent: {}
+[2.343786] (-) TimerEvent: {}
+[2.444753] (-) TimerEvent: {}
+[2.469975] (create3_lidar_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[2.546438] (-) TimerEvent: {}
+[2.647299] (-) TimerEvent: {}
+[2.751221] (-) TimerEvent: {}
+[2.852560] (-) TimerEvent: {}
+[2.953781] (-) TimerEvent: {}
+[3.054907] (-) TimerEvent: {}
+[3.155813] (-) TimerEvent: {}
+[3.256667] (-) TimerEvent: {}
+[3.357480] (-) TimerEvent: {}
+[3.458376] (-) TimerEvent: {}
+[3.560656] (-) TimerEvent: {}
+[3.661587] (-) TimerEvent: {}
+[3.762609] (-) TimerEvent: {}
+[3.863476] (-) TimerEvent: {}
+[3.964735] (-) TimerEvent: {}
+[4.065747] (-) TimerEvent: {}
+[4.166757] (-) TimerEvent: {}
+[4.270250] (-) TimerEvent: {}
+[4.372340] (-) TimerEvent: {}
+[4.476590] (-) TimerEvent: {}
+[4.577274] (-) TimerEvent: {}
+[4.678164] (-) TimerEvent: {}
+[4.778966] (-) TimerEvent: {}
+[4.879809] (-) TimerEvent: {}
+[4.980559] (-) TimerEvent: {}
+[5.081290] (-) TimerEvent: {}
+[5.182259] (-) TimerEvent: {}
+[5.283221] (-) TimerEvent: {}
+[5.384615] (-) TimerEvent: {}
+[5.488978] (-) TimerEvent: {}
+[5.590247] (-) TimerEvent: {}
+[5.691407] (-) TimerEvent: {}
+[5.792359] (-) TimerEvent: {}
+[5.893327] (-) TimerEvent: {}
+[5.994367] (-) TimerEvent: {}
+[6.095128] (-) TimerEvent: {}
+[6.196024] (-) TimerEvent: {}
+[6.296949] (-) TimerEvent: {}
+[6.398139] (-) TimerEvent: {}
+[6.498757] (-) TimerEvent: {}
+[6.603623] (-) TimerEvent: {}
+[6.704716] (-) TimerEvent: {}
+[6.805778] (-) TimerEvent: {}
+[6.906589] (-) TimerEvent: {}
+[7.008393] (-) TimerEvent: {}
+[7.109303] (-) TimerEvent: {}
+[7.211067] (-) TimerEvent: {}
+[7.313554] (-) TimerEvent: {}
+[7.414441] (-) TimerEvent: {}
+[7.515404] (-) TimerEvent: {}
+[7.616821] (-) TimerEvent: {}
+[7.720576] (-) TimerEvent: {}
+[7.821260] (-) TimerEvent: {}
+[7.922255] (-) TimerEvent: {}
+[8.022961] (-) TimerEvent: {}
+[8.123714] (-) TimerEvent: {}
+[8.224669] (-) TimerEvent: {}
+[8.325491] (-) TimerEvent: {}
+[8.426497] (-) TimerEvent: {}
+[8.536590] (-) TimerEvent: {}
+[8.637329] (-) TimerEvent: {}
+[8.738502] (-) TimerEvent: {}
+[8.756859] (create3_lidar_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[8.838939] (-) TimerEvent: {}
+[8.941497] (-) TimerEvent: {}
+[9.042444] (-) TimerEvent: {}
+[9.143863] (-) TimerEvent: {}
+[9.248418] (-) TimerEvent: {}
+[9.351590] (-) TimerEvent: {}
+[9.452583] (-) TimerEvent: {}
+[9.553377] (-) TimerEvent: {}
+[9.654145] (-) TimerEvent: {}
+[9.754846] (-) TimerEvent: {}
+[9.855609] (-) TimerEvent: {}
+[9.959840] (-) TimerEvent: {}
+[10.060763] (-) TimerEvent: {}
+[10.161981] (-) TimerEvent: {}
+[10.263556] (-) TimerEvent: {}
+[10.364283] (-) TimerEvent: {}
+[10.465207] (-) TimerEvent: {}
+[10.565845] (-) TimerEvent: {}
+[10.666702] (-) TimerEvent: {}
+[10.768701] (-) TimerEvent: {}
+[10.869482] (-) TimerEvent: {}
+[10.970203] (-) TimerEvent: {}
+[11.071183] (-) TimerEvent: {}
+[11.172161] (-) TimerEvent: {}
+[11.273068] (-) TimerEvent: {}
+[11.373751] (-) TimerEvent: {}
+[11.474569] (-) TimerEvent: {}
+[11.575362] (-) TimerEvent: {}
+[11.677405] (-) TimerEvent: {}
+[11.785370] (-) TimerEvent: {}
+[11.886273] (-) TimerEvent: {}
+[11.987811] (-) TimerEvent: {}
+[12.088903] (-) TimerEvent: {}
+[12.189771] (-) TimerEvent: {}
+[12.290605] (-) TimerEvent: {}
+[12.391336] (-) TimerEvent: {}
+[12.492105] (-) TimerEvent: {}
+[12.593342] (-) TimerEvent: {}
+[12.695949] (-) TimerEvent: {}
+[12.796713] (-) TimerEvent: {}
+[12.897730] (-) TimerEvent: {}
+[12.998778] (-) TimerEvent: {}
+[13.099598] (-) TimerEvent: {}
+[13.200285] (-) TimerEvent: {}
+[13.300962] (-) TimerEvent: {}
+[13.332491] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[13.404007] (-) TimerEvent: {}
+[13.505008] (-) TimerEvent: {}
+[13.605773] (-) TimerEvent: {}
+[13.706769] (-) TimerEvent: {}
+[13.807967] (-) TimerEvent: {}
+[13.908673] (-) TimerEvent: {}
+[14.009486] (-) TimerEvent: {}
+[14.110390] (-) TimerEvent: {}
+[14.211991] (-) TimerEvent: {}
+[14.312850] (-) TimerEvent: {}
+[14.413469] (-) TimerEvent: {}
+[14.514412] (-) TimerEvent: {}
+[14.615281] (-) TimerEvent: {}
+[14.716507] (-) TimerEvent: {}
+[14.820638] (-) TimerEvent: {}
+[14.921663] (-) TimerEvent: {}
+[15.022408] (-) TimerEvent: {}
+[15.024999] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[15.056809] (create3_lidar_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[15.079050] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[15.081665] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[15.095199] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[15.122664] (-) TimerEvent: {}
+[15.223902] (-) TimerEvent: {}
+[15.324667] (-) TimerEvent: {}
+[15.428585] (-) TimerEvent: {}
+[15.531331] (-) TimerEvent: {}
+[15.632043] (-) TimerEvent: {}
+[15.732885] (-) TimerEvent: {}
+[15.833828] (-) TimerEvent: {}
+[15.936976] (-) TimerEvent: {}
+[16.038430] (-) TimerEvent: {}
+[16.139225] (-) TimerEvent: {}
+[16.240623] (-) TimerEvent: {}
+[16.341381] (-) TimerEvent: {}
+[16.442549] (-) TimerEvent: {}
+[16.543454] (-) TimerEvent: {}
+[16.633206] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[16.643749] (-) TimerEvent: {}
+[16.673610] (create3_lidar_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[16.674545] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[16.674739] (create3_lidar_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[16.736844] (create3_lidar_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[16.744043] (-) TimerEvent: {}
+[16.845253] (-) TimerEvent: {}
+[16.946148] (-) TimerEvent: {}
+[17.051180] (-) TimerEvent: {}
+[17.152066] (-) TimerEvent: {}
+[17.253100] (-) TimerEvent: {}
+[17.345579] (create3_lidar_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[17.353331] (-) TimerEvent: {}
+[17.454418] (-) TimerEvent: {}
+[17.555281] (-) TimerEvent: {}
+[17.579720] (create3_lidar_description) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[17.655581] (-) TimerEvent: {}
+[17.704271] (create3_lidar_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[17.755774] (-) TimerEvent: {}
+[17.856342] (-) TimerEvent: {}
+[17.957097] (-) TimerEvent: {}
+[18.021066] (create3_lidar_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[18.021869] (create3_lidar_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[18.024935] (create3_lidar_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[18.028857] (create3_lidar_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[18.034300] (create3_lidar_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[18.052835] (create3_lidar_description) StdoutLine: {'line': b'-- Generating done\n'}
+[18.057302] (-) TimerEvent: {}
+[18.061474] (create3_lidar_description) StdoutLine: {'line': b'-- Build files have been written to: /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description\n'}
+[18.074599] (create3_lidar_description) CommandEnded: {'returncode': 0}
+[18.076665] (create3_lidar_description) JobProgress: {'identifier': 'create3_lidar_description', 'progress': 'build'}
+[18.079790] (create3_lidar_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description', '--', '-j16', '-l16'], 'cwd': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'luna'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{1d3a5131-71e3-5d2c-971d-3c246a741fa2}'), ('HOME', '/home/luna'), ('OLDPWD', '/home/luna'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/luna/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'luna'), ('NAME', 'DESKTOP-P6HTC6S'), ('WSL_INTEROP', '/run/WSL/32813_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/fac/arduino/Scripts/:/mnt/c/fac/arduino/:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin/:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/USER/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/USER/AppData/Local/Programs/Antigravity/bin:/mnt/c/MinGW/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Roaming/npm:/snap/bin'), ('WT_SESSION', '6f47b024-4f60-498d-aa67-19f71e3478b9'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[18.157607] (-) TimerEvent: {}
+[18.201568] (create3_lidar_description) CommandEnded: {'returncode': 0}
+[18.202473] (create3_lidar_description) JobProgress: {'identifier': 'create3_lidar_description', 'progress': 'install'}
+[18.229003] (create3_lidar_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description'], 'cwd': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'luna'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{1d3a5131-71e3-5d2c-971d-3c246a741fa2}'), ('HOME', '/home/luna'), ('OLDPWD', '/home/luna'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/luna/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'luna'), ('NAME', 'DESKTOP-P6HTC6S'), ('WSL_INTEROP', '/run/WSL/32813_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/fac/arduino/Scripts/:/mnt/c/fac/arduino/:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin/:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/USER/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/USER/AppData/Local/Programs/Antigravity/bin:/mnt/c/MinGW/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Roaming/npm:/snap/bin'), ('WT_SESSION', '6f47b024-4f60-498d-aa67-19f71e3478b9'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/luna/ros2_ws/install/create3_lidar_description:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[18.256256] (create3_lidar_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.258215] (create3_lidar_description) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[18.258699] (-) TimerEvent: {}
+[18.261086] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/urdf/create3_with_lidar.urdf.xacro\n'}
+[18.286758] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_full.launch.py\n'}
+[18.306441] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_gazebo.launch.py\n'}
+[18.339549] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_spawn.launch.py\n'}
+[18.359204] (-) TimerEvent: {}
+[18.363412] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/robot_description_lidar.launch.py\n'}
+[18.393973] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/worlds/obstacles.world\n'}
+[18.422711] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/package_run_dependencies/create3_lidar_description\n'}
+[18.450303] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/parent_prefix_path/create3_lidar_description\n'}
+[18.459476] (-) TimerEvent: {}
+[18.479073] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/ament_prefix_path.sh\n'}
+[18.501845] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/ament_prefix_path.dsv\n'}
+[18.535192] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/path.sh\n'}
+[18.559791] (-) TimerEvent: {}
+[18.567327] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/path.dsv\n'}
+[18.600303] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.bash\n'}
+[18.638122] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.sh\n'}
+[18.660054] (-) TimerEvent: {}
+[18.665566] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.zsh\n'}
+[18.694936] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.dsv\n'}
+[18.726637] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.dsv\n'}
+[18.759313] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/packages/create3_lidar_description\n'}
+[18.760364] (-) TimerEvent: {}
+[18.793938] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/cmake/create3_lidar_descriptionConfig.cmake\n'}
+[18.821503] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/cmake/create3_lidar_descriptionConfig-version.cmake\n'}
+[18.846472] (create3_lidar_description) StdoutLine: {'line': b'-- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.xml\n'}
+[18.861343] (-) TimerEvent: {}
+[18.877448] (create3_lidar_description) CommandEnded: {'returncode': 0}
+[18.940067] (create3_lidar_description) JobEnded: {'identifier': 'create3_lidar_description', 'rc': 0}
+[18.943768] (-) EventReactorShutdown: {}

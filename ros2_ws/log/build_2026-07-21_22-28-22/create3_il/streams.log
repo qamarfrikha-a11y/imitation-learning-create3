@@ -1,0 +1,18 @@
+[8.966s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data
+[11.026s] running develop
+[12.293s] running egg_info
+[12.393s] writing create3_il.egg-info/PKG-INFO
+[12.394s] writing dependency_links to create3_il.egg-info/dependency_links.txt
+[12.394s] writing entry points to create3_il.egg-info/entry_points.txt
+[12.394s] writing requirements to create3_il.egg-info/requires.txt
+[12.395s] writing top-level names to create3_il.egg-info/top_level.txt
+[12.533s] reading manifest file 'create3_il.egg-info/SOURCES.txt'
+[12.568s] writing manifest file 'create3_il.egg-info/SOURCES.txt'
+[12.667s] running build_ext
+[12.668s] Creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3-il.egg-link (link to .)
+[12.671s] Installing bc_inference_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+[12.674s] Installing il_data_collector script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+[12.674s] 
+[12.675s] Installed /home/luna/stage_imitation_learning/ros2_ws/build/create3_il
+[12.675s] running symlink_data
+[12.902s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il' returned '0': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data

@@ -1,0 +1,146 @@
+[76.056s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'create3_il']
+[76.056s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['create3_il'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a44a974af20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a44a974a9b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a44a974a9b0>>, mixin_verb=('build',))
+[77.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[77.499s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[77.499s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[77.499s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[77.499s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[77.500s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[77.500s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/luna/stage_imitation_learning/ros2_ws'
+[77.500s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[77.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[77.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[77.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[77.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[77.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[77.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[77.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[77.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[77.567s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[77.567s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[77.567s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[77.568s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[77.568s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[77.568s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[77.569s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[77.569s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[77.570s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[77.570s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[77.570s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[77.571s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[77.571s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[77.571s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[77.571s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[77.572s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[77.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[77.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[77.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[77.574s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[77.574s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[77.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extensions ['ignore', 'ignore_ament_install']
+[77.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extension 'ignore'
+[77.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extension 'ignore_ament_install'
+[77.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extensions ['colcon_pkg']
+[77.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extension 'colcon_pkg'
+[77.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extensions ['colcon_meta']
+[77.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extension 'colcon_meta'
+[77.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extensions ['ros']
+[77.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_il) by extension 'ros'
+[77.588s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_il' with type 'ros.ament_python' and name 'create3_il'
+[77.589s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['ignore', 'ignore_ament_install']
+[77.590s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ignore'
+[77.590s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ignore_ament_install'
+[77.590s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['colcon_pkg']
+[77.590s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'colcon_pkg'
+[77.591s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['colcon_meta']
+[77.591s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'colcon_meta'
+[77.591s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['ros']
+[77.591s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ros'
+[77.594s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_lidar_description' with type 'ros.ament_cmake' and name 'create3_lidar_description'
+[77.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[77.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[77.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[77.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[77.594s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[77.697s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'create3_lidar_description' in 'src/create3_lidar_description'
+[77.700s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[77.700s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[77.717s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/luna/stage_imitation_learning/ros2_ws/install
+[77.725s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 329 installed packages in /opt/ros/humble
+[77.736s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_args' from command line to 'None'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_target' from command line to 'None'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_clean_cache' from command line to 'False'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_clean_first' from command line to 'False'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'cmake_force_configure' from command line to 'False'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'ament_cmake_args' from command line to 'None'
+[77.975s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'catkin_cmake_args' from command line to 'None'
+[77.976s] Level 5:colcon.colcon_core.verb:set package 'create3_il' build argument 'catkin_skip_building_tests' from command line to 'False'
+[77.976s] DEBUG:colcon.colcon_core.verb:Building package 'create3_il' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il', 'merge_install': False, 'path': '/home/luna/stage_imitation_learning/ros2_ws/src/create3_il', 'symlink_install': True, 'test_result_base': None}
+[77.976s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[77.981s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[77.982s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_il' with build type 'ament_python'
+[77.983s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_il', 'ament_prefix_path')
+[78.001s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[78.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/ament_prefix_path.ps1'
+[78.006s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/ament_prefix_path.dsv'
+[78.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/ament_prefix_path.sh'
+[78.013s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[78.014s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[79.689s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_il'
+[79.690s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[79.690s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[82.505s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: egg_info, init_catalog, upload, bdist_rpm, bdist, install_scripts, bdist_wheel, build_clib, install_egg_info, editable_wheel, install_lib, dist_info, sdist, clean, install_data, upload_docs, install, bdist_egg, update_catalog, setopt, check, build_py, alias, symlink_data, test, build, build_scripts, build_ext, rotate, easy_install, compile_catalog, develop, bdist_dumb, saveopts, extract_messages, install_headers, register
+[84.207s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --index-url, --site-dirs, --version, --install-dir, --no-deps, --dry-run, --zip-ok, --local-snapshots-ok, --verbose, --multi-version, --allow-hosts, --script-dir, --quiet, --editable, --help, --exclude-scripts, --always-copy, --optimize, --upgrade, --record, --egg-path, --no-find-links, --find-links, --build-directory, --uninstall, --no-user-cfg, --prefix, --always-unzip, --user
+[84.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data
+[87.308s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_il', 'pythonpath_develop')
+[87.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/share/create3_il/hook/pythonpath_develop.ps1'
+[87.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il' returned '0': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data
+[87.314s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/share/create3_il/hook/pythonpath_develop.dsv'
+[87.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/share/create3_il/hook/pythonpath_develop.sh'
+[87.333s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il' for CMake module files
+[87.338s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il' for CMake config files
+[87.342s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib'
+[87.343s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/bin'
+[87.343s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/pkgconfig/create3_il.pc'
+[87.344s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages'
+[87.344s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_il', 'pythonpath')
+[87.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/pythonpath.ps1'
+[87.347s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/pythonpath.dsv'
+[87.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/hook/pythonpath.sh'
+[87.352s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/bin'
+[87.358s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_il)
+[87.360s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/package.ps1'
+[87.394s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/package.dsv'
+[87.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/package.sh'
+[87.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/package.bash'
+[87.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il/package.zsh'
+[87.454s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/colcon-core/packages/create3_il)
+[87.603s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[87.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[87.605s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[87.605s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[126.736s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[126.737s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[126.737s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[126.737s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[126.738s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[126.738s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[126.740s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.ps1'
+[126.796s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/luna/stage_imitation_learning/ros2_ws/install/_local_setup_util_ps1.py'
+[126.807s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.ps1'
+[126.813s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.sh'
+[126.816s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/luna/stage_imitation_learning/ros2_ws/install/_local_setup_util_sh.py'
+[126.822s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.sh'
+[126.825s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.bash'
+[126.827s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.bash'
+[126.829s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.zsh'
+[126.835s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.zsh'

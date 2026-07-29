@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing create3_il.egg-info/PKG-INFO
+writing dependency_links to create3_il.egg-info/dependency_links.txt
+writing entry points to create3_il.egg-info/entry_points.txt
+writing requirements to create3_il.egg-info/requires.txt
+writing top-level names to create3_il.egg-info/top_level.txt
+reading manifest file 'create3_il.egg-info/SOURCES.txt'
+writing manifest file 'create3_il.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3-il.egg-link (link to .)
+Installing bc_inference_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+Installing il_data_collector script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+
+Installed /home/luna/stage_imitation_learning/ros2_ws/build/create3_il
+running symlink_data

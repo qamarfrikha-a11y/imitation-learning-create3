@@ -1,0 +1,49 @@
+[0.000000] (-) TimerEvent: {}
+[0.000597] (-) JobUnselected: {'identifier': 'create3_lidar_description'}
+[0.000653] (create3_il) JobQueued: {'identifier': 'create3_il', 'dependencies': OrderedDict()}
+[0.000699] (create3_il) JobStarted: {'identifier': 'create3_il'}
+[0.103551] (-) TimerEvent: {}
+[0.209031] (-) TimerEvent: {}
+[0.314751] (-) TimerEvent: {}
+[0.420286] (-) TimerEvent: {}
+[0.525858] (-) TimerEvent: {}
+[0.631347] (-) TimerEvent: {}
+[0.737023] (-) TimerEvent: {}
+[0.842772] (-) TimerEvent: {}
+[0.947000] (-) TimerEvent: {}
+[1.052668] (-) TimerEvent: {}
+[1.158199] (-) TimerEvent: {}
+[1.263678] (-) TimerEvent: {}
+[1.369354] (-) TimerEvent: {}
+[1.474808] (-) TimerEvent: {}
+[1.507278] (create3_il) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build', '--no-deps', 'symlink_data'], 'cwd': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'luna', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{1d3a5131-71e3-5d2c-971d-3c246a741fa2}', 'HOME': '/home/luna', 'OLDPWD': '/home/luna/stage_imitation_learning/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-22.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/luna/stage_imitation_learning/ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'luna', 'NAME': 'DESKTOP-P6HTC6S', 'WSL_INTEROP': '/run/WSL/43893_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/fac/arduino/Scripts/:/mnt/c/fac/arduino/:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python311/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin/:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/mnt/c/Users/USER/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/fac/flutter_windows_3.41.4-stable/flutter/bin:/mnt/c/Program Files (x86)/VMware/VMware Workstation/bin/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/Scripts/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Python314/:/mnt/c/Users/USER/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/USER/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/USER/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/USER/AppData/Local/Programs/Antigravity/bin:/mnt/c/MinGW/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Local/Pub/Cache/bin:/mnt/c/Users/USER/AppData/Roaming/npm:/snap/bin', 'WT_SESSION': 'aa12fe8a-6fb0-4e75-90db-2efd2f2f02a2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.578244] (-) TimerEvent: {}
+[1.683870] (-) TimerEvent: {}
+[1.789552] (-) TimerEvent: {}
+[1.808552] (create3_il) StdoutLine: {'line': b'running develop\n'}
+[1.893984] (-) TimerEvent: {}
+[1.965946] (create3_il) StdoutLine: {'line': b'running egg_info\n'}
+[1.966107] (create3_il) StdoutLine: {'line': b'creating create3_il.egg-info\n'}
+[1.966575] (create3_il) StdoutLine: {'line': b'writing create3_il.egg-info/PKG-INFO\n'}
+[1.966863] (create3_il) StdoutLine: {'line': b'writing dependency_links to create3_il.egg-info/dependency_links.txt\n'}
+[1.967286] (create3_il) StdoutLine: {'line': b'writing entry points to create3_il.egg-info/entry_points.txt\n'}
+[1.967557] (create3_il) StdoutLine: {'line': b'writing requirements to create3_il.egg-info/requires.txt\n'}
+[1.967644] (create3_il) StdoutLine: {'line': b'writing top-level names to create3_il.egg-info/top_level.txt\n'}
+[1.967955] (create3_il) StdoutLine: {'line': b"writing manifest file 'create3_il.egg-info/SOURCES.txt'\n"}
+[1.969915] (create3_il) StdoutLine: {'line': b"reading manifest file 'create3_il.egg-info/SOURCES.txt'\n"}
+[1.970682] (create3_il) StdoutLine: {'line': b"writing manifest file 'create3_il.egg-info/SOURCES.txt'\n"}
+[1.972222] (create3_il) StdoutLine: {'line': b'running build_ext\n'}
+[1.972578] (create3_il) StdoutLine: {'line': b'Creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3-il.egg-link (link to .)\n'}
+[1.973296] (create3_il) StdoutLine: {'line': b'Installing il_data_collector script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il\n'}
+[1.973794] (create3_il) StdoutLine: {'line': b'\n'}
+[1.974017] (create3_il) StdoutLine: {'line': b'Installed /home/luna/stage_imitation_learning/ros2_ws/build/create3_il\n'}
+[1.974215] (create3_il) StdoutLine: {'line': b'running symlink_data\n'}
+[1.974463] (create3_il) StdoutLine: {'line': b'creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/ament_index\n'}
+[1.974734] (create3_il) StdoutLine: {'line': b'creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/ament_index/resource_index\n'}
+[1.975071] (create3_il) StdoutLine: {'line': b'creating /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/ament_index/resource_index/packages\n'}
+[1.975173] (create3_il) StdoutLine: {'line': b'symbolically linking /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/resource/create3_il -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/ament_index/resource_index/packages\n'}
+[1.975335] (create3_il) StdoutLine: {'line': b'symbolically linking /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/package.xml -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/share/create3_il\n'}
+[1.995107] (-) TimerEvent: {}
+[2.004267] (create3_il) CommandEnded: {'returncode': 0}
+[2.020428] (create3_il) JobEnded: {'identifier': 'create3_il', 'rc': 0}
+[2.021651] (-) EventReactorShutdown: {}

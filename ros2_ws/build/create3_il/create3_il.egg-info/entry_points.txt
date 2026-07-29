@@ -1,0 +1,4 @@
+[console_scripts]
+bc_inference_node = create3_il.bc_inference_node:main
+dagger_session_node = create3_il.dagger_session_node:main
+il_data_collector = create3_il.il_data_collector:main

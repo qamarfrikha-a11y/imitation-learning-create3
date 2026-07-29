@@ -1,0 +1,144 @@
+[22.233s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'create3_lidar_description']
+[22.233s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['create3_lidar_description'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x78cabe345600>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78cabe345090>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78cabe345090>>, mixin_verb=('build',))
+[22.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[22.482s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[22.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[22.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[22.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[22.483s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[22.483s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/luna/stage_imitation_learning/ros2_ws'
+[22.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[22.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[22.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[22.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[22.518s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[22.519s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[22.520s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[22.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[22.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[22.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[22.521s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[22.521s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[22.521s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[22.521s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[22.522s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[22.523s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[22.523s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[22.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['ignore', 'ignore_ament_install']
+[22.523s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ignore'
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ignore_ament_install'
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['colcon_pkg']
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'colcon_pkg'
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['colcon_meta']
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'colcon_meta'
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extensions ['ros']
+[22.524s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_lidar_description) by extension 'ros'
+[22.527s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_lidar_description' with type 'ros.ament_cmake' and name 'create3_lidar_description'
+[22.527s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[22.527s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[22.527s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[22.527s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[22.527s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[22.586s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[22.586s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[22.587s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/luna/ros2_ws/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[22.588s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/luna/ros2_ws/install/create3_lidar_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[22.588s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/luna/ros2_ws/install/create3_lidar_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[22.590s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/luna/stage_imitation_learning/ros2_ws/install
+[22.593s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 329 installed packages in /opt/ros/humble
+[22.596s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_args' from command line to 'None'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_target' from command line to 'None'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_clean_cache' from command line to 'False'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_clean_first' from command line to 'False'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'cmake_force_configure' from command line to 'False'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'ament_cmake_args' from command line to 'None'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'catkin_cmake_args' from command line to 'None'
+[22.648s] Level 5:colcon.colcon_core.verb:set package 'create3_lidar_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[22.649s] DEBUG:colcon.colcon_core.verb:Building package 'create3_lidar_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description', 'merge_install': False, 'path': '/home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description', 'symlink_install': True, 'test_result_base': None}
+[22.649s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[22.650s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[22.650s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description' with build type 'ament_cmake'
+[22.651s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description'
+[22.653s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[22.654s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[22.654s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[22.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description -- -j16 -l16
+[22.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description -- -j16 -l16
+[22.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description
+[22.770s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_lidar_description)
+[22.772s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description
+[22.774s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description' for CMake module files
+[22.776s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description' for CMake config files
+[22.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_lidar_description', 'cmake_prefix_path')
+[22.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.ps1'
+[22.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.dsv'
+[22.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.sh'
+[22.780s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/bin'
+[22.780s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/lib/pkgconfig/create3_lidar_description.pc'
+[22.781s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/lib/python3.10/site-packages'
+[22.782s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/bin'
+[22.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.ps1'
+[22.783s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.dsv'
+[22.784s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.sh'
+[22.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.bash'
+[22.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.zsh'
+[22.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/colcon-core/packages/create3_lidar_description)
+[22.791s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(create3_lidar_description)
+[22.792s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description' for CMake module files
+[22.792s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description' for CMake config files
+[22.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('create3_lidar_description', 'cmake_prefix_path')
+[22.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.ps1'
+[22.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.dsv'
+[22.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/hook/cmake_prefix_path.sh'
+[22.795s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/bin'
+[22.795s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/lib/pkgconfig/create3_lidar_description.pc'
+[22.796s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/lib/python3.10/site-packages'
+[22.797s] Level 1:colcon.colcon_core.environment:checking '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/bin'
+[22.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.ps1'
+[22.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.dsv'
+[22.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.sh'
+[22.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.bash'
+[22.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.zsh'
+[22.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/colcon-core/packages/create3_lidar_description)
+[22.800s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[22.801s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[22.801s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[22.801s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[27.802s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[27.803s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[27.803s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[27.803s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[27.803s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[27.803s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[27.804s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.ps1'
+[27.805s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/luna/stage_imitation_learning/ros2_ws/install/_local_setup_util_ps1.py'
+[27.807s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.ps1'
+[27.808s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.sh'
+[27.809s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/luna/stage_imitation_learning/ros2_ws/install/_local_setup_util_sh.py'
+[27.810s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.sh'
+[27.812s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.bash'
+[27.813s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.bash'
+[27.815s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/luna/stage_imitation_learning/ros2_ws/install/local_setup.zsh'
+[27.816s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/luna/stage_imitation_learning/ros2_ws/install/setup.zsh'

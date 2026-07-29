@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/create3_il/create3_il.egg-info/PKG-INFO
+writing dependency_links to ../../build/create3_il/create3_il.egg-info/dependency_links.txt
+writing entry points to ../../build/create3_il/create3_il.egg-info/entry_points.txt
+writing requirements to ../../build/create3_il/create3_il.egg-info/requires.txt
+writing top-level names to ../../build/create3_il/create3_il.egg-info/top_level.txt
+reading manifest file '../../build/create3_il/create3_il.egg-info/SOURCES.txt'
+writing manifest file '../../build/create3_il/create3_il.egg-info/SOURCES.txt'
+running build
+running build_py
+copying create3_il/inference_node.py -> /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il
+copying create3_il/dagger_session_node.py -> /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il
+running install
+running install_lib
+copying /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il/inference_node.py -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il
+copying /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build/lib/create3_il/dagger_session_node.py -> /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il
+byte-compiling /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/inference_node.py to inference_node.cpython-310.pyc
+byte-compiling /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/dagger_session_node.py to dagger_session_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/create3_il/create3_il.egg-info to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il-0.0.0-py3.10.egg-info
+running install_scripts
+Installing bc_inference_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+Installing dagger_session_node script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+Installing il_data_collector script to /home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/create3_il
+writing list of installed files to '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/install.log'

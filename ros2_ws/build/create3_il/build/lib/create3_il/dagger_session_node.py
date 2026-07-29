@@ -1,0 +1,227 @@
+#!/usr/bin/env python3
+"""
+Session HG-DAgger (Human-Gated DAgger).
+
+Par defaut, le robot est pilote par le modele BC deja entraine.
+Le teleop clavier doit etre lance en publiant sur /cmd_vel_manual (pas /cmd_vel).
+Des qu'une commande manuelle recente est detectee, elle prend la priorite,
+est envoyee au robot, ET enregistree comme nouvelle demonstration de correction
+(observation au moment de la commande -> action de l'expert).
+Quand tu relaches le clavier (plus de commande manuelle depuis MANUAL_TIMEOUT),
+le controle revient automatiquement au modele, sans enregistrement.
+"""
+
+import math
+import os
+import time
+import numpy as np
+import torch
+import torch.nn as nn
+
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
+
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+from sensor_msgs.msg import LaserScan
+
+NUM_SCAN_SAMPLES = 36
+LIDAR_DISTANCE_CAP = 10.0
+MAX_LINEAR_SPEED = 0.5
+MAX_ANGULAR_SPEED = 2.0
+MAX_GOAL_DISTANCE = 12.0
+MODEL_PATH = os.path.expanduser('~/stage_imitation_learning/models/bc_model.pt')
+SAVE_DIR = os.path.expanduser('~/stage_imitation_learning/data/dagger')
+
+GOAL_X = 5.5
+GOAL_Y = 1.5
+
+MANUAL_TIMEOUT = 0.5
+
+
+def euler_from_quaternion(q):
+    siny_cosp = 2 * (q.w * q.z + q.x * q.y)
+    cosy_cosp = 1 - 2 * (q.y * q.y + q.z * q.z)
+    return math.atan2(siny_cosp, cosy_cosp)
+
+
+class BCPolicy(nn.Module):
+    def __init__(self, input_dim=40, output_dim=2):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, output_dim),
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+
+class DaggerSessionNode(Node):
+    def __init__(self):
+        super().__init__('dagger_session_node')
+
+        self.robot_x = 0.0
+        self.robot_y = 0.0
+        self.robot_heading = 0.0
+        self.goal_distance = 0.0
+        self.goal_angle = 0.0
+        self.scan_ranges = [1.0] * NUM_SCAN_SAMPLES
+        self.prev_linear = 0.0
+        self.prev_angular = 0.0
+        self.odom_received = False
+
+        self.manual_linear = 0.0
+        self.manual_angular = 0.0
+        self.last_manual_time = 0.0
+
+        self.device = torch.device('cpu')
+        self.model = BCPolicy().to(self.device)
+        self.model.load_state_dict(torch.load(MODEL_PATH, map_location=self.device))
+        self.model.eval()
+        self.get_logger().info(f"Modele charge depuis {MODEL_PATH}")
+
+        self.observations = []
+        self.actions = []
+        self.currently_manual = False
+        self.nb_corrections = 0
+
+        qos = QoSProfile(depth=10)
+        self.odom_sub = self.create_subscription(Odometry, '/odom', self.odom_callback, qos)
+        self.scan_sub = self.create_subscription(
+            LaserScan, '/scan', self.scan_callback, qos_profile=qos_profile_sensor_data)
+        self.manual_sub = self.create_subscription(
+            Twist, '/cmd_vel_manual', self.manual_callback, qos)
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', qos)
+
+        self.timer = self.create_timer(0.1, self.control_step)
+        os.makedirs(SAVE_DIR, exist_ok=True)
+        self.get_logger().info(
+            "Session DAgger demarree. Le modele pilote par defaut. "
+            "Utilise teleop_twist_keyboard remape sur /cmd_vel_manual pour corriger. "
+            "Ctrl+C pour arreter et sauvegarder les corrections.")
+
+    def odom_callback(self, msg):
+        self.robot_x = msg.pose.pose.position.x
+        self.robot_y = msg.pose.pose.position.y
+        self.robot_heading = euler_from_quaternion(msg.pose.pose.orientation)
+
+        diff_x = GOAL_X - self.robot_x
+        diff_y = GOAL_Y - self.robot_y
+        self.goal_distance = math.sqrt(diff_x ** 2 + diff_y ** 2)
+
+        heading_to_goal = math.atan2(diff_y, diff_x)
+        angle = heading_to_goal - self.robot_heading
+        while angle > math.pi:
+            angle -= 2 * math.pi
+        while angle < -math.pi:
+            angle += 2 * math.pi
+        self.goal_angle = angle
+        self.odom_received = True
+
+    def scan_callback(self, msg):
+        n = min(len(msg.ranges), NUM_SCAN_SAMPLES)
+        for i in range(n):
+            r = msg.ranges[i]
+            if math.isinf(r) or math.isnan(r):
+                r = LIDAR_DISTANCE_CAP
+            self.scan_ranges[i] = float(np.clip(r / LIDAR_DISTANCE_CAP, 0.0, 1.0))
+
+    def manual_callback(self, msg):
+        self.manual_linear = msg.linear.x
+        self.manual_angular = msg.angular.z
+        self.last_manual_time = time.time()
+
+    def build_observation(self):
+        obs = list(self.scan_ranges)
+        obs.append(float(np.clip(self.goal_distance / MAX_GOAL_DISTANCE, 0, 1)))
+        obs.append(float(self.goal_angle) / math.pi)
+        obs.append(float(np.clip(self.prev_linear / MAX_LINEAR_SPEED, -1, 1)))
+        obs.append(float(np.clip(self.prev_angular / MAX_ANGULAR_SPEED, -1, 1)))
+        return np.array(obs, dtype=np.float32)
+
+    def predict_action(self, obs):
+        with torch.no_grad():
+            x = torch.tensor(obs, dtype=torch.float32).unsqueeze(0)
+            action = self.model(x).squeeze(0).numpy()
+        linear = float(np.clip(action[0], -MAX_LINEAR_SPEED, MAX_LINEAR_SPEED))
+        angular = float(np.clip(action[1], -MAX_ANGULAR_SPEED, MAX_ANGULAR_SPEED))
+        return linear, angular
+
+    def control_step(self):
+        if not self.odom_received:
+            return
+
+        obs = self.build_observation()
+        manual_active = (time.time() - self.last_manual_time) < MANUAL_TIMEOUT
+
+        # Le but atteint ne doit bloquer que le pilotage automatique, jamais
+        # une correction manuelle : sinon l'operateur ne peut plus jamais
+        # faire bouger le robot une fois qu'il est passe sous le seuil, meme
+        # pour le repositionner ou le faire reculer.
+        if self.goal_distance < 0.5 and not manual_active:
+            self.publish_cmd(0.0, 0.0)
+            self.get_logger().info("Objectif atteint, arret.", throttle_duration_sec=2.0)
+            return
+
+        if manual_active:
+            linear, angular = self.manual_linear, self.manual_angular
+            self.observations.append(obs)
+            self.actions.append(np.array([linear, angular], dtype=np.float32))
+            self.nb_corrections += 1
+            if not self.currently_manual:
+                self.get_logger().info(">>> Correction manuelle activee")
+                self.currently_manual = True
+            if self.nb_corrections % 20 == 0:
+                self.get_logger().info(f"{self.nb_corrections} pas de correction enregistres...")
+        else:
+            linear, angular = self.predict_action(obs)
+            if self.currently_manual:
+                self.get_logger().info("<<< Retour au pilotage automatique")
+                self.currently_manual = False
+
+        self.publish_cmd(linear, angular)
+        self.prev_linear = linear
+        self.prev_angular = angular
+
+    def publish_cmd(self, linear, angular):
+        msg = Twist()
+        msg.linear.x = linear
+        msg.angular.z = angular
+        self.cmd_vel_pub.publish(msg)
+
+    def save_and_exit(self):
+        self.publish_cmd(0.0, 0.0)
+        if len(self.observations) == 0:
+            self.get_logger().warn("Aucune correction enregistree, rien a sauvegarder.")
+            return
+        timestamp = time.strftime('%Y%m%d_%H%M%S')
+        obs_path = os.path.join(SAVE_DIR, f'dagger_obs_{timestamp}.npy')
+        act_path = os.path.join(SAVE_DIR, f'dagger_act_{timestamp}.npy')
+        np.save(obs_path, np.array(self.observations))
+        np.save(act_path, np.array(self.actions))
+        self.get_logger().info(
+            f"Sauvegarde: {len(self.observations)} pas de correction -> {obs_path} / {act_path}")
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = DaggerSessionNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.save_and_exit()
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

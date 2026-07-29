@@ -1,0 +1,52 @@
+[0.086s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description
+[2.454s] -- The C compiler identification is GNU 11.4.0
+[8.741s] -- The CXX compiler identification is GNU 11.4.0
+[13.317s] -- Detecting C compiler ABI info
+[15.009s] -- Detecting C compiler ABI info - done
+[15.041s] -- Check for working C compiler: /usr/bin/cc - skipped
+[15.063s] -- Detecting C compile features
+[15.066s] -- Detecting C compile features - done
+[15.080s] -- Detecting CXX compiler ABI info
+[16.617s] -- Detecting CXX compiler ABI info - done
+[16.658s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[16.659s] -- Detecting CXX compile features
+[16.659s] -- Detecting CXX compile features - done
+[16.721s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[17.330s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[17.564s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[17.688s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[18.005s] -- Added test 'flake8' to check Python code syntax and style conventions
+[18.006s] -- Added test 'lint_cmake' to check CMake code style
+[18.009s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[18.013s] -- Added test 'xmllint' to check XML markup files
+[18.018s] -- Configuring done
+[18.037s] -- Generating done
+[18.046s] -- Build files have been written to: /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description
+[18.059s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description
+[18.064s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description -- -j16 -l16
+[18.186s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description -- -j16 -l16
+[18.213s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description
+[18.240s] -- Install configuration: ""
+[18.242s] -- Execute custom install script
+[18.245s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/urdf/create3_with_lidar.urdf.xacro
+[18.271s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_full.launch.py
+[18.291s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_gazebo.launch.py
+[18.324s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/create3_lidar_spawn.launch.py
+[18.348s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/launch/robot_description_lidar.launch.py
+[18.378s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/worlds/obstacles.world
+[18.407s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/package_run_dependencies/create3_lidar_description
+[18.434s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/parent_prefix_path/create3_lidar_description
+[18.463s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/ament_prefix_path.sh
+[18.486s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/ament_prefix_path.dsv
+[18.519s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/path.sh
+[18.552s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/environment/path.dsv
+[18.585s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.bash
+[18.622s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.sh
+[18.650s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.zsh
+[18.679s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/local_setup.dsv
+[18.711s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.dsv
+[18.744s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/ament_index/resource_index/packages/create3_lidar_description
+[18.778s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/cmake/create3_lidar_descriptionConfig.cmake
+[18.806s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/cmake/create3_lidar_descriptionConfig-version.cmake
+[18.831s] -- Symlinking: /home/luna/stage_imitation_learning/ros2_ws/install/create3_lidar_description/share/create3_lidar_description/package.xml
+[18.862s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/luna/stage_imitation_learning/ros2_ws/build/create3_lidar_description

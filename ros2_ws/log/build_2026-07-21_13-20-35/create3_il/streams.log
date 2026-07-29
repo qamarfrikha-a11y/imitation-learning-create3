@@ -1,0 +1,29 @@
+[4.722s] Invoking command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data
+[6.079s] running develop
+[6.128s] Traceback (most recent call last):
+[6.128s]   File "/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/setup.py", line 5, in <module>
+[6.129s]     setup(
+[6.129s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+[6.129s]     return distutils.core.setup(**attrs)
+[6.129s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 186, in setup
+[6.129s]     return run_commands(dist)
+[6.130s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+[6.130s]     dist.run_commands()
+[6.131s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+[6.131s]     self.run_command(cmd)
+[6.132s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/dist.py", line 1104, in run_command
+[6.132s]     super().run_command(command)
+[6.133s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1020, in run_command
+[6.133s]     cmd_obj.ensure_finalized()
+[6.133s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py", line 135, in ensure_finalized
+[6.133s]     self.finalize_options()
+[6.134s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/command/develop.py", line 51, in finalize_options
+[6.134s]     easy_install.finalize_options(self)
+[6.135s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py", line 251, in finalize_options
+[6.135s]     'dist_fullname': self.distribution.get_fullname(),
+[6.135s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 275, in get_fullname
+[6.137s]     return _distribution_fullname(self.get_name(), self.get_version())
+[6.137s]   File "/home/luna/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 293, in _distribution_fullname
+[6.137s]     canonicalize_version(version, strip_trailing_zero=False),
+[6.137s] TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+[6.257s] Invoked command in '/home/luna/stage_imitation_learning/ros2_ws/build/create3_il' returned '1': PYTHONPATH=/home/luna/stage_imitation_learning/ros2_ws/build/create3_il/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/luna/stage_imitation_learning/ros2_ws/build/create3_il/build --no-deps symlink_data
