@@ -1,5 +1,0 @@
-  File "/home/luna/stage_imitation_learning/ros2_ws/install/create3_il/lib/python3.10/site-packages/create3_il/inference_node.py", line 73
-    nano ~/stage_imitation_learning/ros2_ws/src/create3_il/create3_il/inference_node.py        self.device = torch.device('cpu')
-         ^
-SyntaxError: invalid syntax
-

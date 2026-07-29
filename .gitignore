@@ -1,0 +1,14 @@
+# Fichiers générés par la compilation ROS 2
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Données volumineuses intermédiaires (gardées en local seulement)
+data/raw/*.npy
+data/raw_buggy_backup/*.npy
+data/dagger/*.npy
+data/processed/backups/*.npz

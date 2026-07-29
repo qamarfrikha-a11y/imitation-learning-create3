@@ -1,1 +1,0 @@
-/home/luna/stage_imitation_learning/ros2_ws/src/create3_lidar_description/launch/robot_description_lidar.launch.py
