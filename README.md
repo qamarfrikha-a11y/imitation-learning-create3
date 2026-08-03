@@ -11,174 +11,71 @@
 
 Ce projet implémente un système de **navigation autonome** pour un robot **iRobot Create 3** en utilisant l'**Apprentissage par Imitation (Imitation Learning)**.
 
-Le robot apprend à naviguer dans un environnement simulé sous **ROS 2** et **Gazebo** en observant des démonstrations humaines, puis en les améliorant via un processus itératif.
+Le robot apprend à naviguer dans un environnement simulé sous **ROS 2** et **Gazebo**, à partir de **10 démonstrations initiales par Behavioral Cloning**, affinées ensuite par **5 sessions interactives de HG-DAgger**.
 
-### 🎯 Objectifs du projet
+<img src="media/images/robot_create3.png" alt="Robot Create 3" width="280"/>
 
-1. ✅ Apprendre une politique de navigation à partir de démonstrations humaines
-2. ✅ Naviguer de manière autonome dans un environnement en L avec obstacles
-3. ✅ Atteindre l'objectif avec 100% de réussite
-4. ✅ Comparer Behavioral Cloning seul vs BC enrichi par HG-DAgger
+### 🎯 Objectifs
 
-### ✨ Fonctionnalités principales
-
-- ✅ **Behavioral Cloning** : Apprentissage supervisé à partir de démonstrations par téléopération
-- ✅ **Human-Gated DAgger** : Affinement itératif par corrections humaines ciblées
-- ✅ **Filtre de sécurité réactif** : Évitement d'obstacles en temps réel
-- ✅ **Évaluation quantitative** : Métriques de performance (taux de réussite, temps, longueur de trajectoire)
+1. Apprendre une politique de navigation à partir de démonstrations humaines
+2. Naviguer de manière autonome dans un couloir en L avec obstacles
+3. Atteindre l'objectif avec 100% de réussite
+4. Comparer Behavioral Cloning seul vs BC enrichi par HG-DAgger
 
 ---
 
-## 🤖 Robot utilisé
+## 🏗️ Pipeline global
 
-<div align="center">
-  <img src="media/images/robot_create3.png" width="600" alt="Robot Create 3"/>
-</div>
+```mermaid
+flowchart TD
+    A["Simulation Gazebo<br/>Robot Create 3 + LiDAR"] -->|"/scan, /odom"| B["Observation (40D)<br/>36×LiDAR + distance/angle objectif + vitesse"]
+    B --> C["Policy Network (MLP)<br/>40 → 256 → 128 → 64 → 2"]
+    C --> D["Filtre de sécurité<br/>détection cône frontal + évitement"]
+    D -->|"/cmd_vel"| A
 
-### Caractéristiques du robot
-
-| Caractéristique | Description |
-|-----------------|-------------|
-| **Nom** | iRobot Create 3 |
-| **Type** | Base mobile à deux roues différentielles |
-| **Capteurs** | LiDAR, odométrie, bumper |
-| **Communication** | ROS 2 |
-| **Simulateur** | Gazebo Classic 11 |
-
----
-
-## 📸 Aperçu de la simulation
-
-<div align="center">
-  <table>
-    <tr>
-      <td><img src="media/images/simulation_start.png" width="400" alt="Départ"/></td>
-      <td><img src="media/images/simulation_goal.png" width="400" alt="Arrivée"/></td>
-    </tr>
-    <tr>
-      <td align="center"><b>📌 Position de départ</b></td>
-      <td align="center"><b>🎯 Objectif atteint</b></td>
-    </tr>
-  </table>
-</div>
+    E["10 démonstrations<br/>Behavioral Cloning"] --> F["Entraînement initial<br/>(6 004 pas)"]
+    F --> G["5 sessions HG-DAgger<br/>corrections ciblées"]
+    G --> H["Dataset final<br/>15 978 pas"]
+    H --> C
+```
 
 ---
 
-## 🏗️ Architecture du système
+## 📸 Simulation & résultats
 
-### Pipeline global
+<p align="center">
+  <img src="media/images/simulation_start.png" alt="Départ" width="45%"/>
+  <img src="media/images/simulation_goal.png" alt="Arrivée" width="45%"/>
+</p>
 
-┌──────────────────────────────────────────────────────────────────────┐
-│ Simulation Gazebo │
-│ ┌──────────────┐ ┌──────────────┐ ┌─────────────────────────┐ │
-│ │ Robot │ │ LiDAR │ │ Objectif │ │
-│ │ Create 3 │──▶│ Scan │──▶│ Position │ │
-│ └──────────────┘ └──────────────┘ └─────────────────────────┘ │
-└──────────────────────────────┬─────────────────────────────────────┘
-│ ROS 2 Topics (/scan, /odom)
-▼
-┌──────────────────────────────────────────────────────────────────────┐
-│ Observation (40D) │
-│ ┌─────────────────────────────────────────────────────────────┐ │
-│ │ 36x LiDAR + Distance Goal + Angle Goal + Vitesse │ │
-│ └─────────────────────────────────────────────────────────────┘ │
-└──────────────────────────────┬─────────────────────────────────────┘
-│
-▼
-┌──────────────────────────────────────────────────────────────────────┐
-│ Policy Network (MLP) │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
-│ │ Input │──▶│ Hidden │──▶│ Hidden │──▶│ Out │ │
-│ │ (40) │ │ (256) │ │ (128) │ │ (2) │ │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────────────┘ │
-└──────────────────────────────┬─────────────────────────────────────┘
-│
-▼
-┌──────────────────────────────────────────────────────────────────────┐
-│ Filtre de Sécurité │
-│ ┌─────────────────────────────────────────────────────────────┐ │
-│ │ Détection dans le cône frontal + Évitement │ │
-│ └─────────────────────────────────────────────────────────────┘ │
-└──────────────────────────────┬─────────────────────────────────────┘
-│
-▼
-┌──────────────────────────────────────────────────────────────────────┐
-│ Commandes de vitesse [v, ω] │
-│ ┌─────────────────────────────────────────────────────────────┐ │
-│ │ /cmd_vel → Robot Create 3 │ │
-│ └─────────────────────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────────────────────────┘
+<p align="center"><b>📌 Position de départ</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>🎯 Objectif atteint</b></p>
 
+### 📉 Courbe d'apprentissage
 
+<img src="media/images/training_curve.png" alt="Courbe d'entraînement" width="600"/>
 
+### 📊 Comparaison BC seul vs BC + HG-DAgger
 
-
-
-
-![Architecture globale](media/images/system_architecture.png)
-
-### 🧠 Architecture du réseau de neurones
-
-![Architecture du MLP](media/images/mlp_network.png)
-
-*Policy Network : MLP à 4 couches (40 → 256 → 128 → 64 → 2)*
-
-### 📊 Prétraitement LiDAR
-
-![Prétraitement LiDAR](media/images/lidar_processing.png)
-
-*Passage du scan complet (360°) au scan rogné utilisé (180° avant, 36 points)*
-
-### 🛡️ Filtre de sécurité
-
-![Filtre de sécurité](media/images/safety_filter.png)
-
-*Détection dans le cône frontal et manœuvre d'évitement avec hystérésis*
+<img src="media/images/comparison_bc_dagger.png" alt="Comparaison BC vs DAgger" width="600"/>
 
 ---
 
 ## 📈 Résultats
 
-### 🏆 Performances globales
+| Méthode | Essais | Taux de réussite | Pas d'entraînement | Erreur validation |
+|---|---|---|---|---|
+| BC seul (modèle instable + bug dataset) | 8 | 0% | 6 004 | 0.0425 |
+| **BC + HG-DAgger (final)** | 10 | **100%** | 15 978 | **0.0324** |
 
-| Métrique | Résultat |
-|----------|----------|
-| **Taux de réussite** | **100%** (10/10 essais) |
-| **Temps moyen de trajet** | 58.8 secondes |
-| **Longueur moyenne de trajectoire** | 9.85 mètres |
-| **Meilleure erreur de validation** | 0.0324 |
+**Temps moyen de trajet (version finale)** : 58.8 s (±15.2) — **Longueur moyenne** : 9.85 m (±1.52)
 
-### 📊 Comparaison des méthodes
-
-| Méthode | Pas d'entraînement | Erreur de validation |
-|---------|-------------------|---------------------|
-| BC seul (Behavioral Cloning) | 6 004 | 0.0425 |
-| BC + HG-DAgger | 15 978 | **0.0324** |
-
-### 📉 Courbe d'apprentissage
-
-![Courbe d'entraînement](media/images/training_curve.png)
-
-### 📊 Résultats d'évaluation
-
-![Résultats d'évaluation](media/images/evaluation_results.png)
-
-### 📊 Déclenchements du filtre de sécurité
-
-![Déclenchements sécurité](media/images/safety_triggers.png)
-
-### 📊 Comparaison BC seul vs BC + HG-DAgger
-
-![Comparaison BC vs DAgger](media/images/comparison_bc_dagger.png)
-
----
-
-## 📋 Résultats détaillés des 10 essais
+<details>
+<summary>📋 Détail des 10 essais finaux</summary>
 
 | Essai | Résultat | Temps (s) | Distance (m) | Contacts | Safety triggers |
-|-------|----------|-----------|--------------|----------|-----------------|
+|---|---|---|---|---|---|
 | 1 | ✅ Réussi | 61.9 | 11.15 | Mineur | 13 |
-| 2 | ✅ Réussi | 47.4 | 8.92 | Aucun | 0 |
+| 2 | ✅ Réussi | 47.0 | 8.92 | Aucun | 0 |
 | 3 | ✅ Réussi | 54.1 | 9.27 | Mineur | 30 |
 | 4 | ✅ Réussi | 54.2 | 9.64 | Mineur | 33 |
 | 5 | ✅ Réussi | 48.3 | 8.56 | Mineur | 0 |
@@ -188,63 +85,47 @@ Le robot apprend à naviguer dans un environnement simulé sous **ROS 2** et **G
 | 9 | ✅ Réussi | 49.9 | 8.78 | Aucun | 0 |
 | 10 | ✅ Réussi | 75.9 | 11.49 | Mineur | 13 |
 
-**📊 Statistiques :**
-- **Moyenne** : 58.8 s (±15.2) | **Médiane** : 9.85 m (±1.52)
-- **Meilleur essai** : #2 (47.4 s, 8.92 m)
-- **Essai le plus difficile** : #7 (97.1 s, 90 déclenchements)
+</details>
 
 ---
 
 ## 🎬 Vidéo de démonstration
 
-[![Vidéo de démonstration](media/images/simulation_start.png)](media/videos/demo_navigation.mp4)
+<img src="media/images/simulation_start.png" alt="Vidéo de démonstration" width="400"/>
 
-*Cliquez sur l'image pour voir la vidéo de démonstration*
+▶️ [**Voir la vidéo complète (47s)**](media/videos/demo_navigation.mp4)
 
 ---
 
 ## 🏗️ Structure du projet
-stage_imitation_learning/
-├── data/ # Données d'entraînement (.npy)
-├── docs/ # Rapport de stage (PDF)
-├── models/ # Modèles PyTorch (.pth)
-├── results/ # Résultats d'évaluation (CSV)
-├── ros2_ws/ # Workspace ROS 2
-├── scripts/ # Scripts utilitaires
-├── media/ # Images et vidéos
-│ ├── images/
-│ └── videos/
-├── src/ # Code source Python
-│ ├── nodes/
-│ ├── imitation_learning/
-│ └── safety/
-├── requirements.txt
-├── README.md
-└── .gitignore
-
 ---
 
 ## 🚀 Installation
 
-### Prérequis
-
-- Ubuntu 22.04 LTS
-- ROS 2 Humble
-- Gazebo Classic 11
-- Python 3.8+
-- PyTorch 1.10+
-
-### Installation rapide
+**Prérequis** : Ubuntu 22.04, ROS 2 Humble, Gazebo Classic 11, Python 3.8+, PyTorch (CPU)
 
 ```bash
-# 1. Cloner le dépôt
 git clone https://github.com/qamarfrikha-a11y/imitation-learning-create3.git
-cd stage_imitation_learning
-
-# 2. Installer les dépendances Python
-pip install -r requirements.txt
-
-# 3. Compiler le workspace ROS 2
-cd ros2_ws
+cd imitation-learning-create3/ros2_ws
 colcon build
 source install/setup.bash
+```
+
+### Entraînement
+
+```bash
+python3 scripts/train_bc.py
+```
+
+### Évaluation
+
+```bash
+ros2 param set /motion_control safety_override full
+python3 ros2_ws/src/create3_il/create3_il/eval_trial_node.py <trial_id>
+```
+
+---
+
+## Remerciements
+
+Structure de dépôt inspirée de [tomasvr/turtlebot3_drlnav](https://github.com/tomasvr/turtlebot3_drlnav).
