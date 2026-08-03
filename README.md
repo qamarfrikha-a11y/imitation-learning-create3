@@ -90,7 +90,6 @@ flowchart TD
 ---
 
 ## 🎬 Vidéo de démonstration
-
 <img src="media/images/simulation_start.png" alt="Vidéo de démonstration" width="400"/>
 
 ▶️ [**Voir la vidéo complète (47s)**](media/videos/demo_navigation.mp4)
@@ -98,6 +97,32 @@ flowchart TD
 ---
 
 ## 🏗️ Structure du projet
+
+```
+imitation-learning-create3/
+├── ros2_ws/src/
+│   ├── create3_il/                 # Package ROS 2 : collecte, entraînement, éval
+│   └── create3_lidar_description/  # Create 3 + LiDAR (URDF/SDF)
+├── config/
+│   └── slam_params.yaml
+├── data/processed/
+│   └── dataset.npz                 # Dataset final fusionné (BC + DAgger)
+├── models/
+│   └── bc_model.pt                 # Politique entraînée finale
+├── results/
+│   ├── evaluation.csv              # 10 essais finaux (BC + DAgger)
+│   └── evaluation_v1_ancien_critere.csv  # 8 essais BC seul
+├── scripts/
+│   ├── train_bc.py
+│   ├── merge_dagger_data.py
+│   └── summarize_evaluation.py
+├── media/
+│   ├── images/
+│   └── videos/
+├── .gitignore
+└── README.md
+```
+
 ---
 
 ## 🚀 Installation
