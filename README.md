@@ -93,8 +93,7 @@ flowchart TD
 
 <img src="media/images/simulation_start.png" alt="Vidéo de démonstration" width="400"/>
 
-▶️ [**Voir la vidéo complète (47s)**](media/videos/demo_navigation.mp4)
-
+   ▶️ [**Voir la vidéo complète (47s)**](media/videos/demo_navigation.mp4)
 ---
 
 ## 🏗️ Structure du projet
