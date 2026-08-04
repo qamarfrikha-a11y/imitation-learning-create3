@@ -29,7 +29,7 @@ Le robot apprend à naviguer dans un environnement simulé sous **ROS 2** et **G
 ```mermaid
 flowchart TD
     A["Simulation Gazebo<br/>Robot Create 3 + LiDAR"] -->|"/scan, /odom"| B["Observation (40D)<br/>36×LiDAR + distance/angle objectif + vitesse"]
-    B --> C["Policy Network (MLP)<br/>40 → 256 → 128 → 64 → 2"]
+    B --> C["Policy Network (MLP)<br/>40 → 128 → 64 → 2"]
     C --> D["Filtre de sécurité<br/>détection cône frontal + évitement"]
     D -->|"/cmd_vel"| A
 
@@ -90,7 +90,7 @@ flowchart TD
 ---
 
 ## 🎬 Vidéo de démonstration
-<img src="media/images/simulation_start.png" alt="Vidéo de démonstration" width="400"/>
+<img src="media/images/videos/demo_navigation.mp4" alt="Vidéo de démonstration" width="400"/>
 
    ▶️ [**Voir la vidéo complète (47s)**](media/videos/demo_navigation.mp4)
 ---
